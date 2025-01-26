@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PractiCam - The Sleek Camera Cover</title>
+    <meta name="description" content="Discover details about PractiCam, the sleek phone camera cover. Learn more and shop now.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="Images/PractiPhone.png" alt="PractiPhone Logo" class="logo">
+        </div>
+        <div class="header-text">
+            <h1>PractiPhone</h1>
+            <p class="made-by">Made by Sammy Rouc Gr: 402</p>
+        </div>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html#home" role="button">Home</a></li>
+                <li><a href="index.html#gallery" role="button">Gallery</a></li>
+                <li><a href="#contact" role="button">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="product-section">
+                <div class="product-details">
+                    <h1>Discover PractiCam</h1>
+                    <p class="description">A sleek and secure phone camera cover for privacy, doubles as an enhancer for stunning photos.</p>
+
+                    <!-- Updated detailed description -->
+                    <p class="description">Introducing <strong>PractiCam</strong>, the sleek security marvel designed to enhance and protect your phone’s camera. PractiCam combines two essential functions into one innovative accessory:</p>
+                    <ul class="benefits-list">
+                        <li class="benefit-item"><strong>Camera Cover</strong>: Protect your privacy with PractiCam. The sleek cover provides security by blocking the camera when not in use.</li>
+                        <li class="benefit-item"><strong>Photo Enhancer</strong>: Doubles as an enhancer to improve the quality of your photos by reducing lens flare and enhancing focus.</li>
+                    </ul>
+                    <p class="price"><span class="discounted">$30.00</span> <span class="final-price">$24.99</span></p>
+                    <a href="index.html" class="cta-button-practimax" data-action="cart">Add to Cart</a>
+                    <a href="index.html" class="cta-button-practimax" data-action="buy">Buy Now</a>
+                </div>
+                <div class="product-image-container">
+                    <img src="Images/PractiCam.png" alt="PractiCam" class="product-image">
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer id="contact">
+        <p>Follow us on:</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/PractiPhone" target="_blank"><img src="Images/facebook-icon.png" alt="Facebook"></a>
+            <a href="https://www.twitter.com/PractiPhone" target="_blank"><img src="Images/twitter-icon.png" alt="Twitter"></a>
+            <a href="https://www.instagram.com/PractiPhone" target="_blank"><img src="Images/instagram-icon.png" alt="Instagram"></a>
+        </div>
+        <p>&copy; 2025 PractiPhone. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Handle PractiCam Add to Cart and Buy Now buttons
+            document.querySelectorAll('.cta-button-practimax').forEach(function(button) {
+                button.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const action = event.target.getAttribute('data-action');
+                    alert(`Product has been successfully ${action === 'cart' ? 'added to the cart' : 'ordered'}. Redirecting to the main page.`);
+                    window.location.href = 'index.html';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

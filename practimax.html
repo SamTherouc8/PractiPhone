@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PractiMax - The 4-in-1 Marvel</title>
+    <meta name="description" content="Discover details about PractiMax, the 4-in-1 marvel phone accessory. Learn more and shop now.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="Images/PractiPhone.png" alt="PractiPhone Logo" class="logo">
+        </div>
+        <div class="header-text">
+            <h1>PractiPhone</h1>
+            <p class="made-by">Made by Sammy Rouc Gr: 402</p>
+        </div>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html#home" role="button">Home</a></li>
+                <li><a href="index.html#gallery" role="button">Gallery</a></li>
+                <li><a href="#contact" role="button">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="product-section">
+                <div class="product-details">
+                    <h1>Discover PractiMax</h1>
+                    <p class="description">A 4-in-1 marvel: Phone holder, phone charger, phone fan, and phone external battery.</p>
+
+                    <!-- Updated detailed description -->
+                    <p class="description">Introducing <strong>PractiMax</strong>, the ultimate 4-in-1 marvel designed to elevate your mobile experience. PractiMax combines four essential functions into one sleek and innovative accessory:</p>
+                    <ul class="benefits-list">
+                        <li class="benefit-item"><strong>Phone Holder</strong>: Keep your phone secured and accessible at all times. The PractiMax holder provides a sturdy grip, allowing you to use your phone hands-free, whether you're watching videos, navigating, or video calling.</li>
+                        <li class="benefit-item"><strong>Phone Charger</strong>: PractiMax comes with a built-in charger that charges any phone at any speed, ensuring your phone stays powered throughout the day.</li>
+                        <li class="benefit-item"><strong>Phone Fan</strong>: The PractiMax fan keeps your phone cool during intense gaming sessions, preventing overheating and ensuring optimal performance.</li>
+                        <li class="benefit-item"><strong>Phone External Battery</strong>: Need extra power on the go? PractiMax includes a powerful external battery that can be easily attached to your phone. This extra boost of power ensures that you can stay connected even during long hours of travel or heavy usage.</li>
+                    </ul>
+                    <p class="price"><span class="discounted">$75.00</span> <span class="final-price">$44.99</span></p>
+                    <a href="index.html" class="cta-button-practimax" data-action="cart">Add to Cart</a>
+                    <a href="index.html" class="cta-button-practimax" data-action="buy">Buy Now</a>
+                </div>
+                <div class="product-image-container">
+                    <img src="Images/PractiMax.png" alt="PractiMax" class="product-image">
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer id="contact">
+        <p>Follow us on:</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/PractiPhone" target="_blank"><img src="Images/facebook-icon.png" alt="Facebook"></a>
+            <a href="https://www.twitter.com/PractiPhone" target="_blank"><img src="Images/twitter-icon.png" alt="Twitter"></a>
+            <a href="https://www.instagram.com/PractiPhone" target="_blank"><img src="Images/instagram-icon.png" alt="Instagram"></a>
+        </div>
+        <p>&copy; 2025 PractiPhone. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Handle PractiMax Add to Cart and Buy Now buttons
+            document.querySelectorAll('.cta-button-practimax').forEach(function(button) {
+                button.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const action = event.target.getAttribute('data-action');
+                    alert(`Product has been successfully ${action === 'cart' ? 'added to the cart' : 'ordered'}. Redirecting to the main page.`);
+                    window.location.href = 'index.html';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,390 @@
+/* Variable Definitions */
+:root {
+    --bg-color: #222;
+    --text-color: #ccc;
+    --header-bg: #333;
+    --banner-bg: #ff6b6b;
+    --hover-color: #fff;
+    --button-bg: #ffee00;
+    --button-hover-bg: #33cc33;
+    --button-text: #222;
+    --button-hover-text: #fff;
+    --description-color: #bbb;
+    --price-color: #fff;
+    --discounted-price-color: #888;
+    --final-price-color: #0f0;
+    --border-color: #444;
+}
+
+/* General Styles */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: var(--header-bg);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Logo Animation */
+.logo-container {
+    animation: expand 1.5s ease-in-out;
+}
+
+@keyframes expand {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.logo {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    color: var(--hover-color);
+}
+
+/* Banner Styles */
+.banner {
+    width: 100%;
+    background-color: var(--banner-bg);
+    color: var(--hover-color);
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    animation: slide-down 1s ease-in-out;
+}
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Banner Close Button */
+.banner .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: var(--hover-color);
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Gallery Styles */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Gallery Item Styles */
+.gallery-item {
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.gallery-item img {
+    max-width: 100%;
+    max-height: 200px;
+    border: 2px solid var(--border-color);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item a {
+    text-decoration: none;
+    color: var(--text-color);
+    display: block;
+    margin-top: 10px;
+}
+
+.gallery-item span {
+    display: block;
+    margin-top: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.gallery-item .description {
+    animation: slide-in 1s forwards;
+    opacity: 0;
+    margin-top: 10px;
+    color: var(--description-color);
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Price Styles */
+.gallery-item .price {
+    margin-top: 5px;
+    font-weight: bold;
+    color: var(--price-color);
+}
+
+.gallery-item .final-price {
+    color: var(--final-price-color);
+    margin-left: 0;
+    animation: pulse-final 1s infinite;
+}
+
+@keyframes pulse-final {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.gallery-item .discounted {
+    text-decoration: line-through;
+    color: var(--discounted-price-color);
+    margin-right: 5px;
+    font-size: 0.9em;
+}
+
+.gallery-item span:hover {
+    color: var(--hover-color);
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--header-bg);
+    color: var(--text-color);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer .social-icons img {
+    width: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+footer .social-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* Testimonials Styles */
+.testimonials {
+    text-align: center;
+    background-color: var(--header-bg);
+    color: var(--text-color);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.testimonials h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.product-image.small {
+    max-width: 300px;
+    height: auto;
+    border: 2px solid var(--border-color);
+}
+
+/* CTA Button Styles */
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.cta-button:hover {
+    background-color: var(--button-hover-bg);
+    color: var(--button-hover-text);
+}
+
+/* Responsive Design for Gallery */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+.logo-container img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-text {
+    text-align: center;
+}
+
+.made-by {
+    font-size: 0.9em;
+    font-style: italic;
+    color: var(--text-color);
+    text-align: center;
+    animation: fade-in 1s ease-in-out;
+    margin-top: -10px;  /* Adjust as needed */
+}
+
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.product-section {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product-details {
+    max-width: 50%;
+}
+
+.product-details h1 {
+    margin-top: 20px;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.product-details .description {
+    font-size: 1.2em;
+    margin: 20px 0;
+    color: var(--description-color);
+}
+
+.product-details .price {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--price-color);
+}
+
+.product-details .discounted {
+    text-decoration: line-through;
+    color: var(--discounted-price-color);
+    margin-right: 10px;
+}
+
+.product-details .final-price {
+    color: var(--final-price-color);
+}
+
+.product-details .cta-button-practimax {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.product-details .cta-button-practimax:hover {
+    background-color: var(--button-hover-bg);
+    color: var(--button-hover-text);
+}
+
+.product-image-container {
+    max-width: 40%;
+}
+
+.product-image-container img {
+    width: 100%;
+    height: auto;
+    border: 2px solid var(--border-color);
+    transition: transform 0.3s ease;
+}
+
+.product-image-container img:hover {
+    transform: scale(1.05);
+}
+
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.benefits-list {
+    margin: 20px 0;
+    font-size: 1.2em;
+    color: var(--description-color);
+}
+
+.benefit-item {
+    margin-bottom: 10px;
+}

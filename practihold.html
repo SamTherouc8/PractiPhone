@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PractiHold - The Ultimate Phone Holder</title>
+    <meta name="description" content="Discover details about PractiHold, the ultimate phone holder for secure and convenient use. Learn more and shop now.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="Images/PractiPhone.png" alt="PractiPhone Logo" class="logo">
+        </div>
+        <div class="header-text">
+            <h1>PractiPhone</h1>
+            <p class="made-by">Made by Sammy Rouc Gr: 402</p>
+        </div>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html#home" role="button">Home</a></li>
+                <li><a href="index.html#gallery" role="button">Gallery</a></li>
+                <li><a href="#contact" role="button">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="product-section">
+                <div class="product-details">
+                    <h1>Discover PractiHold</h1>
+                    <p class="description">The ultimate phone holder for secure and convenient use, whether at home, in the car, or on the go.</p>
+
+                    <!-- Updated detailed description -->
+                    <p class="description">Introducing <strong>PractiHold</strong>, the versatile and secure phone holder designed to make your life easier. PractiHold offers several key benefits:</p>
+                    <ul class="benefits-list">
+                        <li class="benefit-item">Secure grip ensuring your phone stays in place no matter where you are.</li>
+                        <li class="benefit-item">Adjustable angles for the perfect viewing experience.</li>
+                        <li class="benefit-item">Compact and portable design, making it easy to carry and use anywhere.</li>
+                        <li class="benefit-item">Compatible with all phone models, whether big or small.</li>
+                    </ul>
+                    <p class="price"><span class="discounted">$25.00</span> <span class="final-price">$19.99</span></p>
+                    <a href="index.html" class="cta-button-practimax" data-action="cart">Add to Cart</a>
+                    <a href="index.html" class="cta-button-practimax" data-action="buy">Buy Now</a>
+                </div>
+                <div class="product-image-container">
+                    <img src="Images/PractiHold.png" alt="PractiHold" class="product-image">
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer id="contact">
+        <p>Follow us on:</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/PractiPhone" target="_blank"><img src="Images/facebook-icon.png" alt="Facebook"></a>
+            <a href="https://www.twitter.com/PractiPhone" target="_blank"><img src="Images/twitter-icon.png" alt="Twitter"></a>
+            <a href="https://www.instagram.com/PractiPhone" target="_blank"><img src="Images/instagram-icon.png" alt="Instagram"></a>
+        </div>
+        <p>&copy; 2025 PractiPhone. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Handle PractiHold Add to Cart and Buy Now buttons
+            document.querySelectorAll('.cta-button-practimax').forEach(function(button) {
+                button.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const action = event.target.getAttribute('data-action');
+                    alert(`Product has been successfully ${action === 'cart' ? 'added to the cart' : 'ordered'}. Redirecting to the main page.`);
+                    window.location.href = 'index.html';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
